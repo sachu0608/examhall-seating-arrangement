@@ -125,7 +125,9 @@
 
                 if (highlightSeat === seatNumber) {
                     seat.classList.add("highlight");
-                    seat.innerHTML = <i class="fas fa-user"></i>;  <!-- User icon -->
+                    let userIcon = document.createElement("i");
+                    userIcon.classList.add("fas", "fa-user");  // Add user icon to seat
+                    seat.appendChild(userIcon);
                 }
 
                 bench.appendChild(seat);
